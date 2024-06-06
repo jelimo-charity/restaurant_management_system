@@ -1,0 +1,1 @@
+ALTER TABLE "state" DROP COLUMN IF EXISTS "city";

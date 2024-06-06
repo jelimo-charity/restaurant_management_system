@@ -1,6 +1,6 @@
 import 'dotenv/config'
-import db from './drizzle/db'
-import { cityTable, cityRelations } from './drizzle/schema';
+import db from './db'
+import { cityTable, cityRelations } from './schema';
 import { Column } from 'drizzle-orm';
 
  type TScity = typeof cityTable.$inferSelect;

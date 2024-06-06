@@ -6,6 +6,13 @@ import { integer } from "drizzle-orm/pg-core";
 import { serial, varchar } from "drizzle-orm/pg-core";
 import { pgTable } from "drizzle-orm/pg-core";
 
+
+// =======================TYPES USED AT USER.SERVICE.TS====================
+export type TSuser = typeof usersTable.$inferSelect
+export type TIuser = typeof usersTable.$inferInsert
+
+export type TSstate = typeof stateTable.$inferSelect
+export type TIstate = typeof stateTable.$inferInsert
 //=================creating tables=============
 
 // ===========state table============

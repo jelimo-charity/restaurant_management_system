@@ -13,6 +13,44 @@ export type TIuser = typeof usersTable.$inferInsert
 
 export type TSstate = typeof stateTable.$inferSelect
 export type TIstate = typeof stateTable.$inferInsert
+
+export type TScity = typeof cityTable.$inferSelect
+export type TIcity = typeof cityTable.$inferInsert
+
+export type TSaddress = typeof addressTable.$inferSelect
+export type TIaddress = typeof addressTable.$inferInsert
+
+export type TScategory = typeof categoryTable.$inferSelect
+export type TIcategory = typeof categoryTable.$inferInsert
+
+export type TScomments = typeof commentsTable.$inferSelect
+export type TIcomments = typeof commentsTable.$inferInsert
+
+
+export type TSrestaurant = typeof restaurantTable.$inferSelect
+export type TIrestaurant = typeof restaurantTable.$inferInsert
+
+
+export type TSrestaurantOwner = typeof restaurantOwnerTable.$inferSelect
+export type TIrestaurantOwner = typeof restaurantOwnerTable.$inferInsert
+
+export type TSdrivers = typeof driversTable.$inferSelect
+export type TIdrivers = typeof driversTable.$inferInsert
+
+export type TSorderMenu = typeof orderMenuTable.$inferSelect
+export type TIorderMenu = typeof orderMenuTable.$inferInsert
+
+export type TSmenuItem = typeof menuItemTable.$inferSelect
+export type TImenuItem = typeof menuItemTable.$inferInsert
+
+export type TSorders = typeof ordersTable.$inferSelect
+export type TIorders = typeof ordersTable.$inferInsert
+
+export type TSstatusCatalog = typeof statusCatalogTable.$inferSelect
+export type TIstatusCatalog = typeof statusCatalogTable.$inferInsert
+
+export type TSorderStatus = typeof orderStatusTable.$inferSelect
+export type TIorderStatus = typeof orderStatusTable.$inferInsert
 //=================creating tables=============
 
 // ===========state table============
@@ -115,10 +153,7 @@ export const menuItemTable = pgTable("menu_item", {
     active: varchar("active").notNull()
 });
 
-//menuitem and restaurant
-// export const menuitemRelations = relations(menuItemTable, ({many}) =>{
-//    restaurant: many(restaurantTable)
-// })
+
 export const menuitemRelations = relations(menuItemTable,({one,many})=>({
     restaurant:many(restaurantTable),
     category: many(categoryTable),

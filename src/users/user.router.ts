@@ -2,7 +2,6 @@ import { Hono } from "hono";
 import { getUsers, getUser, createUser, updateUser, deleteUser } from "./user.controller";
 import { zValidator } from "@hono/zod-validator";
 import { userSchema } from "../validators";
-// import {zValidator} from '@hono/zod-validator'
 
 
 export const userRouter = new Hono();

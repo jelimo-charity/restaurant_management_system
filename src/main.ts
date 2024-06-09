@@ -11,6 +11,7 @@ import { commentRouter } from "./Comments/comments.router.js";
 import { driverRouter } from "./drivers/drivers.router.js";
 import { menuRouter } from "./menuItem/menuItem.router.js";
 import { orderMenuItemRouter } from "./orderMenu/orderMenu.router.js";
+import { restuarantOwnerRouter } from "./restaurantOwner/restaurantOwner.router.js";
 
 const app = new Hono().basePath('/api');
 
@@ -32,7 +33,7 @@ app.route("/", commentRouter)
 app.route("/", driverRouter)
 app.route("/", orderMenuItemRouter)
 // app.route("/", orderStatusRouter)
-// app.route("/", restuarantOwnerRouter)
+app.route("/", restuarantOwnerRouter)
 // app.route("/", statusCatalogRouter)
 
 serve({
